@@ -1,6 +1,6 @@
 # Étape 1 : Choisir l'image de base Tomcat avec JDK 11
 # Correction : Le format officiel est 'tomcat:9.0' (avec un point)
-FROM tomcat:10.1-jdk11-openjdk-slim
+FROM tomcat:10.1-jdk17-temurin
 
 # Étape 2 : Définir le répertoire de travail dans Tomcat
 # Correction : Il faut des barres obliques pour les chemins dans Docker (environnement Linux)
