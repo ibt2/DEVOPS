@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+
+ <servlet>
+    <servlet-name>Spec_servlet</servlet-name>
+    <servlet-class>com.JAVA.Servlet.Spec_servlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Spec_servlet</servlet-name>
+    <url-pattern>/TODO_specialite</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Disp_servlet</servlet-name>
+    <servlet-class>com.JAVA.Servlet.Disp_servlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Disp_servlet</servlet-name>
+    <url-pattern>/TODO_disponibilite</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.JAVA.Servlet.Login</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/TODO_login</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>RDV_servlet</servlet-name>
+    <servlet-class>com.JAVA.Servlet.RDV_servlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RDV_servlet</servlet-name>
+    <url-pattern>/TODO_RDV</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
