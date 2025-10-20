@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mon-app-service
+  name: tp-global-devops-service
 spec:
   selector:
-    app: mon-app
+    app: tp-global-devops # Doit correspondre au label du Deployment
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
-  type: ClusterIP
+      port: 80 # Le port du Service (interne au cluster)
+      targetPort: 8080 # Le port du conteneur (Tomcat)
+  type: ClusterIP # Type de service standard pour être utilisé par un Ingress

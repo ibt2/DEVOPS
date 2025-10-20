@@ -1,18 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: mon-app-ingress
+  name: tp-global-devops-ingress
   annotations:
+    # Annotation standard pour l'Ingress Controller Nginx (requis pour Minikube/K8s)
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: monapp.local
+    - host: devops-app.info # Domaine d'accès public
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: mon-app-service
+                name: tp-global-devops-service
                 port:
-                  number: 80
+                  number: 80 # Le port du service (défini dans service.yaml)

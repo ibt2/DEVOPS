@@ -1,22 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mon-app-deployment
+  name: tp-global-devops-deployment
   labels:
-    app: mon-app
+    app: tp-global-devops
 spec:
-  replicas: 2
+  replicas: 2 # Nous déployons 2 Pods
   selector:
     matchLabels:
-      app: mon-app
+      app: tp-global-devops
   template:
     metadata:
       labels:
-        app: mon-app
+        app: tp-global-devops
     spec:
       containers:
-        - name: mon-app
+        - name: tp-global-devops-container
           image: tp_global_devops:v1
+          # Pour Minikube ou un cluster local, l'image doit être disponible localement
+          # Sinon, utilisez Always ou changez votre registre Docker
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 8080 # Le port d'écoute de Tomcat
