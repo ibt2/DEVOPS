@@ -8,7 +8,7 @@ WORKDIR /usr/local/tomcat/webapps
 
 # Étape 3 : Copier votre fichier WAR dans le répertoire 'webapps' de Tomcat
 # Assurez-vous que le chemin et le nom sont corrects
-COPY target/Devops-1.0.0-SNAPSHOT.war .
+COPY target/TP_Global_Devops-1.0.0-SNAPSHOT.war .
 
 # Étape 4 : Exposer le port par défaut de Tomcat
 EXPOSE 8080
